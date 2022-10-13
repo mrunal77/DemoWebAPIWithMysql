@@ -10,10 +10,23 @@ namespace Demo_Web_API.Controllers
     [ApiController]
     public class BooksController : ControllerBase
     {
+
+        private ISampleDataGenetrate SampleDataGenetrater = new SampleDataGenetrate();
+
+        
+
         [HttpGet(Name = "GetBook")]
         public ActionResult GetBookData()
         {
             var books = new List<Book>();
+            try
+            {
+                SampleDataGenetrater.SampleDataAdd();
+            }
+            catch (Exception e)
+            {    //  Ignore
+            }
+
             using (var context = new LibraryContext())
             {
                 books = context.Book
@@ -50,7 +63,7 @@ namespace Demo_Web_API.Controllers
                     Language = book.Language,
                     Pages = book.Pages,
                     Publisher = publisher
-                });               
+                });
 
                 // Saves changes
                 context.SaveChanges();
