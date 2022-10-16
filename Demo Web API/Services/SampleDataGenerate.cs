@@ -4,6 +4,10 @@ namespace Demo_Web_API
 {
     public class SampleDataGenetrate : ISampleDataGenetrate
     {
+        public SampleDataGenetrate()
+        {
+
+        }
         public void SampleDataAdd()
         {
             try
@@ -46,7 +50,7 @@ namespace Demo_Web_API
             }
             catch (Exception ex)
             {
-                throw new Exception();
+                throw ex;
             }
         }
     }

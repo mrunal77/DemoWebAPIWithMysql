@@ -1,4 +1,8 @@
-public interface ISampleDataGenetrate
+
+namespace Demo_Web_API
 {
-    public void SampleDataAdd();
+    public interface ISampleDataGenetrate
+    {
+        void SampleDataAdd();
+    }
 }

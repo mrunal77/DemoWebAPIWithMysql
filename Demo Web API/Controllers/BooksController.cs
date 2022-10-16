@@ -11,7 +11,15 @@ namespace Demo_Web_API.Controllers
     public class BooksController : ControllerBase
     {
 
-        private ISampleDataGenetrate SampleDataGenetrater = new SampleDataGenetrate();
+        private ISampleDataGenetrate SampleDataGenetrater ;
+
+        // public BooksController(ISampleDataGenetrate _SampleDataGenetrater){
+        //     this.SampleDataGenetrater = _SampleDataGenetrater;
+        // } 
+
+        public BooksController(){
+            this.SampleDataGenetrater = new SampleDataGenetrate();
+        } 
 
         
 
