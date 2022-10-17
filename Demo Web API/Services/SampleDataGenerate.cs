@@ -1,6 +1,6 @@
 using Demo_Web_API.Models;
 
-namespace Demo_Web_API
+namespace Demo_Web_API.Services
 {
     public class SampleDataGenetrate : ISampleDataGenetrate
     {

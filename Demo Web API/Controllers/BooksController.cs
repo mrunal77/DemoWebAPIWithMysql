@@ -1,8 +1,10 @@
 ﻿using Demo_Web_API.DTO;
 using Demo_Web_API.Models;
+using Demo_Web_API.Services;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Demo_Web_API.Controllers
 {
@@ -13,13 +15,14 @@ namespace Demo_Web_API.Controllers
 
         private ISampleDataGenetrate SampleDataGenetrater ;
 
-        // public BooksController(ISampleDataGenetrate _SampleDataGenetrater){
-        //     this.SampleDataGenetrater = _SampleDataGenetrater;
-        // } 
+        public BooksController(ISampleDataGenetrate _SampleDataGenetrater)
+        {
+            this.SampleDataGenetrater = _SampleDataGenetrater;
+        }
 
-        public BooksController(){
-            this.SampleDataGenetrater = new SampleDataGenetrate();
-        } 
+        //public BooksController(){
+        //    this.SampleDataGenetrater = new SampleDataGenetrate();
+        //} 
 
         
 

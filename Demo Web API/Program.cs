@@ -1,4 +1,5 @@
 using Demo_Web_API.Models;
+using Demo_Web_API.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,8 @@ builder.Services.AddControllers().AddNewtonsoftJson(options =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<ISampleDataGenetrate, SampleDataGenetrate>();
+
 
 var app = builder.Build();
 

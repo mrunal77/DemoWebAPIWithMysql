@@ -1,5 +1,5 @@
 
-namespace Demo_Web_API
+namespace Demo_Web_API.Services
 {
     public interface ISampleDataGenetrate
     {
